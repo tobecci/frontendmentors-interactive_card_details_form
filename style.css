@@ -1,0 +1,149 @@
+body{
+    /* background-color: black; */
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 30% 80%;
+
+}
+
+.left-section{
+    background-image: url("./images/bg-main-desktop.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+.right-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* styles for left section */
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section > div {
+    width: 100%px;
+    height: 250px;
+    /* background-color: blue; */
+    margin: 20px;
+    border-radius: 4px;
+}
+
+.left-section > .card-top{
+    position: relative;
+    left: 150px;
+    background-image: url("./images/bg-card-front.png");
+    background-size: cover;
+}
+
+.left-section > .card-bottom{
+    position: relative;
+    left: 250px;
+    background-image: url("./images/bg-card-back.png");
+    background-size: cover;
+}
+
+/* /styles for left section */
+
+
+
+
+/* styles for right section */
+
+.right-section > form {
+    /* background-color: red; */
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+}
+
+.right-section > form > .fields{
+    /* background-color: brown; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "name name"
+    "number number"
+    "exp cvc"
+    ;
+}
+
+form label {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+form input{
+    border: hsl(270, 3%, 87%) 1px solid;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    border-radius: 4px;
+    color: hsl(279, 6%, 55%);
+}
+
+form input::placeholder{
+    color: hsl(279, 6%, 55%);
+
+}
+
+form [name="cvc"]{
+
+}
+
+form .button{
+    /* background-color: red; */
+    margin-top: 10px;
+}
+
+form .button button{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: hsl(278, 68%, 11%);
+    color:hsl(0, 0%, 100%);
+}
+
+
+.fields> div{
+    display: flex;
+    flex-direction: column;
+}
+
+.fields > .name{
+    grid-area: name;
+}
+
+.fields > .number{
+    grid-area: number;
+}
+
+.fields > .exp{
+    grid-area: exp;
+}
+
+.fields > .cvc{
+    grid-area: cvc;
+    margin-left: 20px;
+}
+
+/* / styles for right section */
